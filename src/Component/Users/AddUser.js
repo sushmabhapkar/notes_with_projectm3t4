@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from '../UI/Card';
+import classes from './AddUser.module.css';
 const AddUser=()=>
 {
       const addUserHandler=(event)=>
@@ -7,6 +9,7 @@ const AddUser=()=>
       }
 
  return(
+     <Card className={classes.input}>
  <form>
     <label htmlFor='username'>Name</label>
     <input id='username' type='text'/>
@@ -16,6 +19,8 @@ const AddUser=()=>
 
     <button type='submit'>ADD</button>
    </form>
+   
+</Card>
  );
 }
 export default AddUser;
