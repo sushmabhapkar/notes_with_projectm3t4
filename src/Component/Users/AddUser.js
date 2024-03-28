@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 import Button from '../UI/Button';
-const AddUser=()=>
+const AddUser=(props)=>
 {
 
  const [enteredUsername,setEnteredUsername]= useState('');
@@ -21,7 +21,7 @@ const AddUser=()=>
            {
             return;
            }
-           console.log(enteredUsername,enteredAge);
+           props.onAddUser(enteredUsername, enteredAge);
            //form reset logic
            setEnteredUsername('');
            setEnteredAge('');
